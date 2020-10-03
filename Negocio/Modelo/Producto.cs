@@ -33,6 +33,7 @@ namespace Negocio.Modelo
             entidad.Precio = producto.Precio;
             entidad.Fecha = producto.Fecha;
             //llamo a la persistencia
+
             ProductosRepo repProdu = new ProductosRepo();
             repProdu.EditarProducto(entidad);
         }

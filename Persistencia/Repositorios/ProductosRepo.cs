@@ -25,6 +25,10 @@ namespace Persistencia.Repositorios
                 }
                 else
                 {
+                   /* sql = @"SELECT id_productos, codigo,descripcion,precio,fecha FROM productos
+                        WHERE codigo LIKE @consulta OR descripcion LIKE @consulta";*/
+
+
                     sql = "SELECT id_productos, codigo,descripcion,precio,fecha FROM productos " +
                         "WHERE codigo LIKE @consulta OR descripcion LIKE @consulta";
 
