@@ -21,6 +21,11 @@ namespace Negocio.Objetos
             
            
         }
+        public DataUsuario(string nombre, string apellido)
+        {
+            this.nombre = nombre;
+            this.apellido = apellido;
+        }
 
         public string NombreCompleto()   // property
         {
