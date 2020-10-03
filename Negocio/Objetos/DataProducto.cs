@@ -15,9 +15,10 @@ namespace Negocio.Objetos
 
         public DataProducto()
         {
+
         }
        
-        public long Id_productos { get => id_productos; set => id_productos = value; }
+        public long Id_productos { get => id_productos; private set => id_productos = value; }
         public string Codigo { get => codigo; set => codigo = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public float Precio { get => precio; set => precio = value; }
