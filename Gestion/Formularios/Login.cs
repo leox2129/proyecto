@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Gestion.ViewModels;
-
+using Negocio.Objetos;
 
 namespace Gestion.Formularios
 {
@@ -18,7 +18,12 @@ namespace Gestion.Formularios
         {
             InitializeComponent();
             UsuarioView usrview = new UsuarioView();
-            Lista<>
+            List<DataUsuario> lista =  usrview.ListarDoctores();
+            dgvDoctores.DataSource = lista;
+                //llamo a conexion.        
+                
+           
+
 
 
         }
