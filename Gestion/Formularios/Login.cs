@@ -12,6 +12,9 @@ using Gestion.ViewModels;
 using Negocio.Objetos;
 using System.Data.SqlClient;
 using System.Net.Configuration;
+using Negocio.Modelo;
+using Presentacion.Helpers;
+
 
 namespace Gestion.Formularios
 {
@@ -19,45 +22,41 @@ namespace Gestion.Formularios
     {
         public Login()
         {
-            InitializeComponent();
-            UsuarioView usrview = new UsuarioView();
-            List<DataUsuario> lista =  usrview.ListarDoctores();
-            dgvDoctores.DataSource = lista;
-                //llamo a conexion.        
-                
-           
-
-
-
-        }
-        ConexionDB();
-        private void Login_Load(object sender, EventArgs e)
-        { 
-    
-            try
+            string nombreUsuario = txtUsuario.Text;
+            string password = txtContrasena.Text;
+            //Usuario usr = new Negocio.Modelo.Usuario();
+            Usuario usr = new Usuario();
+            usr.Ingresar(nombreUsuario, password, Variables.programa);
+            bool ingreso = usr.Ingresar(nombreUsuario, password, Variables.programa);
+            if (checkrecordar.Checked == true)
             {
-                
-
-                
-
+                Properties.Settings.Default.UserName = txtUsuario.Text;
+                Properties.Settings.Default.password = txtContrasena.Text;
+                Properties.Settings.Default.Save();
             }
-            catch
+            else
             {
-
-
-
+                /*Properties.Settings.Default.UserName = "";
+                Properties.Settings.Default.password = "";
+                Properties.Settings.Default.Save();*/
             }
+            Principal p = new Principal();
+            p.Show();
 
-            
+            //guardo los datos
+
+
         }
 
         private void BtCerrar_Click(object sender, EventArgs e)
         {
             Close();         
 
-
         }
 
-        
+        private void txtContrasena_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

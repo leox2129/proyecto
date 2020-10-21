@@ -8,13 +8,18 @@ using Persistencia.Contratos;
 namespace Persistencia.Repositorios
 {
     public class ProductosRepo : IProducto
-    {        
-        public List<ProductoEntidad> ListarProductos(string consulta=null)
+    {   
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="consulta"></param>
+        /// <returns></returns>
+        public List<ProductoEntidad> ListarProductos(string consulta=null)            
         {
             List<ProductoEntidad> list = new List<ProductoEntidad>();
             MySqlConnection conexion = null;
             try
-            {
+            {                
                 MySqlDataReader reader = null;
                 conexion = ConexionDB.GetConexion();
                 conexion.Open();
@@ -84,6 +89,7 @@ namespace Persistencia.Repositorios
             {
                 if (conexion != null) {
                     conexion.Close();
+                    conexion.Dispose();
                 } 
             }
             return list;
@@ -147,6 +153,7 @@ namespace Persistencia.Repositorios
                 if (conexion != null)
                 {
                     conexion.Close();
+                    conexion.Dispose();
                 }
             }
         }

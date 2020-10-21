@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dgvDoctores = new System.Windows.Forms.DataGridView();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BtIniciar = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -39,34 +36,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.BtCerrar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDoctores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataUsuarioBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvDoctores
-            // 
-            this.dgvDoctores.AutoGenerateColumns = false;
-            this.dgvDoctores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDoctores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombreDataGridViewTextBoxColumn,
-            this.apellidoDataGridViewTextBoxColumn});
-            this.dgvDoctores.DataSource = this.dataUsuarioBindingSource;
-            this.dgvDoctores.Location = new System.Drawing.Point(149, 270);
-            this.dgvDoctores.Name = "dgvDoctores";
-            this.dgvDoctores.Size = new System.Drawing.Size(481, 150);
-            this.dgvDoctores.TabIndex = 0;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // apellidoDataGridViewTextBoxColumn
-            // 
-            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
-            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
-            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
             // 
             // dataUsuarioBindingSource
             // 
@@ -80,7 +51,6 @@
             this.BtIniciar.TabIndex = 1;
             this.BtIniciar.Text = "Iniciar";
             this.BtIniciar.UseVisualStyleBackColor = true;
-           
             // 
             // txtUsuario
             // 
@@ -113,6 +83,7 @@
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(100, 20);
             this.txtContrasena.TabIndex = 4;
+            this.txtContrasena.TextChanged += new System.EventHandler(this.txtContrasena_TextChanged);
             // 
             // BtCerrar
             // 
@@ -135,11 +106,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.BtIniciar);
-            this.Controls.Add(this.dgvDoctores);
             this.Name = "Login";
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDoctores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataUsuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -147,10 +115,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvDoctores;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource dataUsuarioBindingSource;
         private System.Windows.Forms.Button BtIniciar;
         private System.Windows.Forms.TextBox txtUsuario;
