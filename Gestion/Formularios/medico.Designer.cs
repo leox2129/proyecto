@@ -43,7 +43,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.Btconsultar = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.DtMedico = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.APELLIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TELEFONO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SEXO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ESPECIALIDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.DtMedico)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -179,21 +187,71 @@
             this.Btconsultar.Text = "Consultar";
             this.Btconsultar.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // DtMedico
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(73, 408);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(580, 118);
-            this.listView1.TabIndex = 15;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.DtMedico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DtMedico.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.CI,
+            this.NOMBRE,
+            this.APELLIDO,
+            this.TELEFONO,
+            this.SEXO,
+            this.ESPECIALIDAD});
+            this.DtMedico.Location = new System.Drawing.Point(81, 411);
+            this.DtMedico.Name = "DtMedico";
+            this.DtMedico.Size = new System.Drawing.Size(562, 148);
+            this.DtMedico.TabIndex = 15;
+            this.DtMedico.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtMedico_CellContentClick);
+            // 
+            // ID
+            // 
+            this.ID.FillWeight = 70F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Width = 70;
+            // 
+            // CI
+            // 
+            this.CI.HeaderText = "CI";
+            this.CI.Name = "CI";
+            this.CI.Width = 70;
+            // 
+            // NOMBRE
+            // 
+            this.NOMBRE.HeaderText = "NOMBRE";
+            this.NOMBRE.Name = "NOMBRE";
+            this.NOMBRE.Width = 70;
+            // 
+            // APELLIDO
+            // 
+            this.APELLIDO.HeaderText = "APELLIDO";
+            this.APELLIDO.Name = "APELLIDO";
+            this.APELLIDO.Width = 70;
+            // 
+            // TELEFONO
+            // 
+            this.TELEFONO.HeaderText = "TELEFONO";
+            this.TELEFONO.Name = "TELEFONO";
+            this.TELEFONO.Width = 90;
+            // 
+            // SEXO
+            // 
+            this.SEXO.HeaderText = "SEXO";
+            this.SEXO.Name = "SEXO";
+            this.SEXO.Width = 50;
+            // 
+            // ESPECIALIDAD
+            // 
+            this.ESPECIALIDAD.HeaderText = "ESPECIALIDAD";
+            this.ESPECIALIDAD.Name = "ESPECIALIDAD";
             // 
             // FrMedico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 571);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.DtMedico);
             this.Controls.Add(this.Btconsultar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label8);
@@ -212,6 +270,7 @@
             this.Name = "FrMedico";
             this.Text = "Medico";
             this.Load += new System.EventHandler(this.medico_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DtMedico)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,6 +293,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button Btconsultar;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.DataGridView DtMedico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TELEFONO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SEXO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ESPECIALIDAD;
     }
 }

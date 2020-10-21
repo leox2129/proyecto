@@ -21,5 +21,10 @@ namespace Gestion.Formularios
         {
 
         }
+
+        private void DtMedico_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

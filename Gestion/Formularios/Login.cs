@@ -4,11 +4,14 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Gestion.ViewModels;
 using Negocio.Objetos;
+using System.Data.SqlClient;
+using System.Net.Configuration;
 
 namespace Gestion.Formularios
 {
@@ -27,5 +30,34 @@ namespace Gestion.Formularios
 
 
         }
+        ConexionDB();
+        private void Login_Load(object sender, EventArgs e)
+        { 
+    
+            try
+            {
+                
+
+                
+
+            }
+            catch
+            {
+
+
+
+            }
+
+            
+        }
+
+        private void BtCerrar_Click(object sender, EventArgs e)
+        {
+            Close();         
+
+
+        }
+
+        
     }
 }
