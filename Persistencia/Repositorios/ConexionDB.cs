@@ -14,14 +14,14 @@ using MySql.Data.MySqlClient;
 /// </summary>
 
 
-namespace Persistencia.Repositorios
+namespace _3_Persistencia
 {
     public class ConexionDB
     {    
         public static MySqlConnection GetConexion()
         {
             //string cadenaConexion = "Database=prueba; Data Source=localhost; Port=3306; User Id=usuario26; Password=usuario26";
-            string cadenaConexion = "Database=fastfood; Data Source=localhost; Port=3306; User Id=root; Password=admin";
+            string cadenaConexion = "Database=prueba; Data Source=localhost; Port=3306; User Id=root; Password=admin";
             MySqlConnection conexion = null;
             try
             {
